@@ -1,7 +1,7 @@
-import { useContext } from "react";
+// import { useContext } from "react";
 
 // CONTEXT
-import { AuthContext } from "./context/auth.context";
+// import { AuthContext } from "./context/auth.context";
 
 // COMPONENTS
 import Navbar from "./components/Navbar";
@@ -15,7 +15,7 @@ import Authentication from "./pages/Authentication";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
-  const { isLoggedIn } = useContext(AuthContext);
+  // const { isLoggedIn } = useContext(AuthContext);
 
   return (
     <div className="App">

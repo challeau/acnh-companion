@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 
 import "./styles/Home.css"
 
@@ -9,7 +9,7 @@ import "./styles/Home.css"
 // COMPONENTS
 
 function Home(props) {
-  let [contentType, setContentType] = useState(null);
+  // let [contentType, setContentType] = useState(null);
   // const { user } = useContext(AuthContext);
 
   return (
