@@ -10,7 +10,6 @@
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.4.0",
     "react-scripts": "5.0.1",
-    "testing-library": "^0.0.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -45,6 +44,7 @@
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "gh-pages": "^5.0.0",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "testing-library": "^0.0.2"
   }
 }
