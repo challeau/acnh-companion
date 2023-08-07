@@ -34,7 +34,9 @@ function Home(props) {
 
       <div className="container-row tools">
 	<h3 className="title"><span>Tools</span></h3>
-	<div className="fishing"></div>
+	<div className="fishing">
+	  
+	</div>
 	<div className="bug-catching">bug catching</div>
 
 	
