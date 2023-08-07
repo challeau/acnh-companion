@@ -1,0 +1,45 @@
+#home {
+}
+
+.presentation {
+    height: 60vh;
+    color: var(--grey);
+    background-color: var(--light-purple);
+}
+
+.presentation img {
+    height: 40vh;
+}
+
+.presentation .container-column {
+    width: 35vw;
+}
+
+.presentation .title {
+    color: var(--white);
+    text-align: center;
+}
+
+.button-box {
+    align-self: center;
+}
+
+.presentation button {
+    color: var(--grey);
+    border-color: var(--grey);
+}
+
+.tools h3 span {
+    border-bottom: 2px solid rgba(0,0,0,0);
+    transition: border-bottom 0.2s ease-in-out;
+}
+
+.tools h3:hover span {
+    border-bottom: 2px solid var(--dark-purple);
+}
+
+.tools h3 img {
+    height: 0.75em;
+    width: auto;
+    display: inline-block;
+}

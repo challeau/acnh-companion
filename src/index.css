@@ -1,0 +1,100 @@
+/* GENERAL */
+:root {
+    --grey: #262A2C;
+    --white: #F6F7EB;
+    --light-purple: #B38CB4;
+    --dark-purple: #5C415D;
+    --yellow: #F7CD67;
+    --red: #F52C29;
+    --green: #60A561;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.page {
+    min-height: 100vh;
+    background-color: var(--white);
+    color: var(--grey);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input[type="submit"], input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+button.round-purple {
+    padding: 0.5em 0.8em;
+    font-weight: 600;
+    font-size: 0.8em;
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 30px;
+    width: 100%;
+    position: relative;
+    overflow: visible;
+}
+
+button.round-purple:hover {
+    color: var(--white);
+    background-color: var(--dark-purple);
+}
+
+/* For the exclamation icon --> add style="max-height: 1px;" to the Link */
+button.round-purple:hover::after {
+    content:  url("../public/assets/exclamation.png");
+    display: block;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    top: 25%;
+    left: 135%;
+    text-align: center;
+    transform: rotate(40deg) scaleX(-1) scale(0.25);
+}
+
+.button-box {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10vh;
+    width:60%;
+}
+
+.container-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1em;
+}
+
+.container-column {
+    font-size: 1.3em;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.title {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
