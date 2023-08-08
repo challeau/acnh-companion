@@ -35,6 +35,7 @@ function App() {
 	<Route path="/insects" element={<AllInsectsList />} />
 	<Route path="/insects/all" element={<AllInsectsList />} />
 	<Route path="/insects/available" element={<AvailableInsects />} />
+
 	{isLoggedIn && <Route path="/profile" element={<Profile />} /> }
 
       </Routes>
