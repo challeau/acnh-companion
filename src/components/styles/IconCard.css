@@ -1,0 +1,55 @@
+.icon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    height: 20vh;
+    width: 11vw;
+    font-size: 0.75em;
+    padding: 1.5em;
+    border-radius: 1em;
+}
+
+.icon-card .name {
+    color: var(--dark-purple);
+    font-weight: 900;
+    margin: 0;
+}
+
+.icon-card img {
+    width: 100px;
+    align-self: center;
+}
+
+.icon-card .info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.info .price,
+.info .location {
+    display: flex;
+    align-items: center;
+    gap: 0 1em;
+    width: 100%;
+}
+
+.info img {
+    height: 2em;
+    width: auto;
+}
+
+/* LIGHT MODE */
+.icon-card.light {
+    color: var(--grey);
+    background-color: var(--white);
+}
+
+/* LIGHT MODE */
+.icon-card.dark {
+    color: var(--white);
+    background-color: var(--light-purple);
+}

@@ -1,0 +1,30 @@
+#available-fish {
+    color: var(--grey);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.title {
+    padding: 1em 1em 0;
+    font-size: 1.6em;
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+}
+
+.title h3 {
+    margin: 0;
+}
+
+.title img {
+    width: 2em;
+}
+
+.toggle-container {
+    align-self: flex-end;
+    background-color: rgba(38, 42, 44, 0.25);
+    padding: 1em;
+    border-radius: 25px;
+}

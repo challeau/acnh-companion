@@ -32,6 +32,7 @@ function AuthProviderWrapper(props) {
 
     if (storedToken) {
       axios
+      
 	.post(verifyRoute, {token: storedToken})
 	.then((response) => {
 	  setIsLoading(false);

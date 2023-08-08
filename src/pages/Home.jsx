@@ -23,24 +23,40 @@ function Home(props) {
 	  <p>With an account, you can register new entries in your Crittepedia and visualize at a glance the critters you're missing.</p>
 	  <div className="button-box">
 	    <Link to="/auth" style={{maxHeight: "1px"}}>
-              <button className="round-purple">Sign up</button>
-            </Link>
-	    <Link to="/auth" style={{maxHeight: "1px"}}>
-              <button className="round-purple">Log in</button>
+              <button className="round-purple">Let me in !</button>
             </Link>
 	  </div>
 	</div>
       </div>
 
-      <div className="container-row tools">
+      <div className="container-column tools">
 	<h3 className="title"><span>Tools</span></h3>
-	<div className="fishing">
-	  
-	</div>
-	<div className="bug-catching">bug catching</div>
 
-	
-	
+	<div className="container">
+	  <div className="fishing">
+	    <Link className="option" to="/fish/all">
+	      <img alt="fish" src="/assets/icons/fish.png" style={{marginTop: "1em"}} />
+	      <h4>All Fish</h4>
+	    </Link>
+	    
+	    <Link className="option" to="/fish/available">
+	      <img alt="fishing rod" src="/assets/icons/fishing-rod.png" />
+	      <h4>Available Fish</h4>
+	    </Link>
+	  </div>
+
+	  <div className="bug-catching">
+	    <Link className="option" to="/insects/all">
+	      <img alt="insects" src="/assets/icons/butterfly.png" />
+	      <h4>All Insects</h4>
+	    </Link>
+	    
+	    <Link className="option" to="/insects/available">
+	      <img alt="net" src="/assets/icons/net.png" />
+	      <h4>Available Insects</h4>
+	    </Link>
+	  </div>
+	</div>
       </div>
     </div>
   );

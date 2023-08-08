@@ -1,0 +1,24 @@
+#insects-page {
+    color: var(--grey);
+    background-color: var(--silver);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.title {
+    padding: 1em 1em 0;
+    font-size: 1.6em;
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+}
+
+.title h3 {
+    margin: 0;
+}
+
+.title img {
+    width: 2em;
+}

@@ -33,7 +33,7 @@
 }
 
 #navbar .userOptions {
-    width: 5vw;
+    width: 9vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

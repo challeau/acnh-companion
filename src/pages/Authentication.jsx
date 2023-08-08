@@ -1,9 +1,10 @@
-import { useState, useContext } from 'react';
-import { useNavigate } from "react-router-dom";
+import "./styles/Authentication.css";
+import { useState, useContext } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
 // CONTEXT
-import { AuthContext } from '../context/auth.context';
+import { AuthContext } from "../context/auth.context";
 
 // COMPONENTS
 
@@ -43,7 +44,7 @@ function Authentication(props) {
       .then(response => {
         storeToken(response.data?.token);
         authenticateUser();
-        navigate('/'); 
+        navigate("/"); 
       })
       .catch(error => {
         const errorDescription = error.response.data.message;
@@ -54,16 +55,20 @@ function Authentication(props) {
   // Creates an account
   const submitSignupForm = event => {
     event.preventDefault();
-    console.log(signUpURL, form);
 
     axios
       .post(signUpURL, form)
       .then(response => {
-        console.log('response status', response.status);
-        setForm(form);
+        setForm({
+	  type: "login",
+	  username: form.username,
+	  password: "",
+	  picture: "",
+	  role: "regular_user"
+	});
+	setErrorMessage("Your account was created. Log in now!")
       })
       .catch(error => {
-	console.log(error)
         const errorDescription = error.response.data.message;
         setErrorMessage(errorDescription);
       });
@@ -72,7 +77,7 @@ function Authentication(props) {
 
   return (
     <div id="authentication">
-      <section className="">
+      <div className="infos">
         <h1>ACNH companion</h1>
         <div className="options">
           <h2>Sign up or log in to proceed.</h2>
@@ -81,13 +86,13 @@ function Authentication(props) {
             <button onClick={() => toggleForm("login")}>Login</button>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section>
+      <div>
         {showForm && form.type === "signup" && (
-          <form id='signup'>
+          <form id="signup">
 	    <h2>Create an account.</h2>
-	    { errorMessage && <p className="errorMessage">{errorMessage}</p> }
+	    { errorMessage && <p className="errorMessage">> {errorMessage}</p> }
 	    
 	    <label htmlFor="username">Username</label>
             <input type="text" name="username" value={form.username}
@@ -101,13 +106,19 @@ function Authentication(props) {
             <input type="url" name="picture" value={form.picture}
 		   onChange={event => setForm({...form, picture: event.target.value})} />
 
-	    <button type="submit" onClick={event => submitSignupForm(event)}>Sign me UP!</button>
+	    <div className="button-box">
+	      <Link style={{maxHeight: "1px"}}>
+		<button className="round-purple" type="submit" onClick={event => submitSignupForm(event)}>
+		  Sign up
+		</button>
+              </Link>
+	    </div>
 	  </form>
         )}
         {showForm && form.type.includes("login") && (
-	  <form id='login'>
+	  <form id="login">
 	    <h2>Welcome back!</h2>
-	    { errorMessage && <p className="errorMessage">{errorMessage}</p> }
+	    { errorMessage && <p className="> errorMessage">{errorMessage}</p> }
 
 	    <label htmlFor="username">Username</label>
             <input type="text" name="username" value={form.username}
@@ -117,10 +128,18 @@ function Authentication(props) {
             <input type="password" name="password" value={form.password}
 		   onChange={event => setForm({...form, password: event.target.value})} />
 
-	    <button type="submit" onClick={event => submitLogInForm(event)}>Log in</button>
+	     <div className="button-box">
+	      <Link style={{maxHeight: "1px"}}>
+		<button className="round-purple" type="submit" onClick={event => submitLogInForm(event)}>
+		  Log In
+		</button>
+              </Link>
+	    </div>
 	  </form>
         )}
-      </section>
+      </div>
+
+      <img className="bob" alt="bob" src="/assets/bob.png" />
     </div>
   );
 }
